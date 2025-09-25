@@ -1,22 +1,22 @@
-#include <unistd.h>
+#include "libft.h"
 
-void *ft_memset(void *ptr, int value, size_t num)
+void *ft_memset(void *ptr, int c, size_t len)
 {
-	size_t i = 0;
-	unsigned char *a = ptr;
-	while(i < num)
-	{
-		a[i] = value;
-		i++;
-	}
-	return a;
+    size_t i = 0;
+    unsigned char *a = ptr;
+    unsigned char b = c;
+    while (i < len)
+    {
+        a[i] = b;
+        i++;
+    }
+    return ptr;
 }
 
-#include <stdio.h>
-int main(void)
+/*int main(void)
 {
-	char str[] = "hy my name is";
-	char *y = ft_memset(str, '*', 5);
-	printf("%s", y);
-	return 0;
-}
+    char str[] = "hy my name is";
+    char *y = ft_memset(str, '*', 3);
+    printf("%s\n", y);
+    return 0;
+}*/

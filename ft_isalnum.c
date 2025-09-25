@@ -1,21 +1,18 @@
-#include <unistd.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_isalnum(int c)
 {
-	if((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= '0' && c <= '9'))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return 1;
 	else
 		return 0;
 }
 
-#include <stdio.h>
-
-int main(void)
+/*int main(void)
 {
-	char t = ' ';
+	int t = 48;
 	int r = ft_isalnum(t);
-	printf("%d", r);
+	printf("%d\n", r);
 	printf("%d", isalnum(t));
 	return 0;
-}
+}*/

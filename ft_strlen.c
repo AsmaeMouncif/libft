@@ -1,8 +1,6 @@
-#include <unistd.h>
-#include <string.h> 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_strlen(char *str)
+int ft_strlen(const char *str)
 {
 	int i = 0;
 	while(str[i] != '\0')
@@ -12,12 +10,12 @@ int ft_strlen(char *str)
 	return i;
 }
 
-int main(void)
+/*int main(void)
 {
-	char str[] = "H2ello";
+	char str[] = "";
 	int r = ft_strlen(str);
 	int r2 = strlen(str);
-	printf("%d", r);
+	printf("%d\n", r);
 	printf("%d", r2);
 	return 0;
-}
+}*/

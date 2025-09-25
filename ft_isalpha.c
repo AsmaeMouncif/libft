@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_isalpha(int c)
 {
@@ -9,12 +8,11 @@ int ft_isalpha(int c)
 	    return 0;
 }
 
-#include <stdio.h>
-int main(void)
+/*int main(void)
 {
-    char t = 'A';
+    int t = 48;
 	int r = ft_isalpha(t);
 	printf("%d\n", r);
 	printf("%d", isalpha(t));
 	return (0);
-}
+}*/

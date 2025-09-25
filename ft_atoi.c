@@ -1,4 +1,6 @@
-int ft_atoi(char *str)
+#include "libft.h"
+
+int ft_atoi(const char *str)
 {
 	int i;
 	i = 0;
@@ -30,15 +32,11 @@ int ft_atoi(char *str)
 	
 }
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-int main(void)
+/*int main(void)
 {
 	char str[] = " -23A32";
 	int r = ft_atoi(str);
-	printf("%d", r);
+	printf("%d\n", r);
 	printf("%d", atoi(str));
 	return 0;
-}
+}*/

@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_isprint(int c)
 {
@@ -9,12 +8,11 @@ int ft_isprint(int c)
 		return 0;
 }
 
-#include <stdio.h>
-int main(void)
+/*int main(void)
 {
-	char t = 31;
+	int t = 32;
 	int r = ft_isprint(t);
-	printf("%d", r);
+	printf("%d\n", r);
 	printf("%d", isprint(t));
 	return 0;
-}
+}*/

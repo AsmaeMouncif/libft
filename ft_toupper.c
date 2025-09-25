@@ -1,16 +1,17 @@
+#include "libft.h"
+
 int ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
+	if(c >= 97 && c <= 122)
 		c = c - 32;
 	return c;
 }
 
-#include <stdio.h>
-
-int main(void)
+/*int main(void)
 {
-	char t = 'c';
+	int t = 97;
 	char r = ft_toupper(t);
-	printf("%c",  r);
+	printf("%c\n", r);
+	printf("%c", toupper(t));
 	return 0;
-}
+}*/
