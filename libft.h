@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:20:52 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/18 14:06:32 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/19 16:38:10 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,8 @@ void ft_putchar_fd(char c, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 char *ft_itoa(int n);
+char **ft_split(char const *s, char c);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
