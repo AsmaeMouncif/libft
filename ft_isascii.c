@@ -6,13 +6,11 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:23:17 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/13 15:07:46 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 11:05:12 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }

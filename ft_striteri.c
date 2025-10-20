@@ -12,27 +12,29 @@
 
 #include "libft.h"
 
-void ft_check(unsigned int t , char *c)
+void	ft_check(unsigned int t, char *c)
 {
-    if(t % 2 == 0 && *c >= 'a' &&  *c <= 'z')
-        *c = *c - 32;
+	if (t % 2 == 0 && *c >= 'a' && *c <= 'z')
+		*c = *c - 32;
 }
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    int i = 0;
-    while(s[i] != '\0')
-    {
-        f(i , &s[i]);
-        i++;
-    }
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-
-int main()
+int	main(void)
 {
-    char s[] = "hello";
-    ft_striteri(s, ft_check);
-    printf("%s\n" , s);
-    return 0;
+	char	s[] = "hello";
+
+	ft_striteri(s, ft_check);
+	printf("%s\n", s);
+	return (0);
 }

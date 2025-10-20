@@ -12,35 +12,39 @@
 
 #include "libft.h"
 
-char to_upper(unsigned int t, char c)
+char	to_upper(unsigned int t, char c)
 {
-    (void) t;
-    if(c >= 'a' && c <= 'z')
-        return c - 32;
-    return c;
+	(void)t;
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    size_t l = ft_strlen(s);
-    char *p = malloc(l + 1);
-    if(p == NULL)
-        return NULL;
-    int i = 0;
-    while(s[i] != '\0')
-    {
-        p[i] = f(i, s[i]);
-        i++;
-    }
-    p[i] = '\0';
-    return p;
+	size_t	l;
+	char	*p;
+	int		i;
+
+	l = ft_strlen(s);
+	p = malloc(l + 1);
+	if (p == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		p[i] = f(i, s[i]);
+		i++;
+	}
+	p[i] = '\0';
+	return (p);
 }
 
-int main()
+int	main(void)
 {
-    char s[] = "hello";
-    char *p = ft_strmapi(s, to_upper);
-    printf("%s", p);
-    free(p);
-    return 0;
+	char s[] = "hello";
+	char *p = ft_strmapi(s, to_upper);
+	printf("%s", p);
+	free(p);
+	return (0);
 }

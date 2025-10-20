@@ -6,13 +6,13 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:01:47 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 14:12:26 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 14:30:15 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    return (c >= 65 && c <= 90);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

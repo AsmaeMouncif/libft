@@ -6,13 +6,11 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 10:58:27 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 13:21:49 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 10:52:19 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

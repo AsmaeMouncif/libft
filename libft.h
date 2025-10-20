@@ -6,13 +6,14 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:20:52 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/19 16:38:10 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 13:06:44 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <string.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>

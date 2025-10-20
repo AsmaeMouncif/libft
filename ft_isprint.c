@@ -6,13 +6,11 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:19:36 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 11:58:33 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 11:25:23 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

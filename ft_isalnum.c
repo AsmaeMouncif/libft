@@ -6,13 +6,12 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:08:12 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 13:24:21 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 10:49:04 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
+			&& c <= '9'));
 }

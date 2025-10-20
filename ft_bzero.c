@@ -6,19 +6,22 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:37:19 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 10:11:40 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 10:48:28 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    char *p = s;
-    size_t i = 0;
-    while(i < n)
-    {
-        p[i] = '\0';
-        i++;
-    }
+	unsigned char	*p;
+	size_t			i;
+
+	p = s;
+	i = 0;
+	while (i < n)
+	{
+		p[i] = '\0';
+		i++;
+	}
 }

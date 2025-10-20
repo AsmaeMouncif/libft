@@ -6,13 +6,11 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:31:29 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 13:26:30 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 11:19:41 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return (c >= 48 && c <= 57);
+	return (c >= 48 && c <= 57);
 }

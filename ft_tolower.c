@@ -6,13 +6,13 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:12:46 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 14:14:46 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 14:33:49 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    return (c >= 97 && c <= 122);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
