@@ -6,13 +6,13 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:18:09 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/19 14:51:25 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:19:12 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -28,7 +28,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-int	word_length(char const *s, char c)
+static int	word_length(char const *s, char c)
 {
 	int	l;
 
@@ -40,7 +40,7 @@ int	word_length(char const *s, char c)
 	return (l);
 }
 
-char	*copy_word(char const *s, int len)
+static char	*copy_word(char const *s, int len)
 {
 	char	*p;
 	int		i;
@@ -58,7 +58,7 @@ char	*copy_word(char const *s, int len)
 	return (p);
 }
 
-void	fail(char **p, int i)
+static void	fail(char **p, int i)
 {
 	i--;
 	while (i >= 0)
@@ -69,51 +69,43 @@ void	fail(char **p, int i)
 	free(p);
 }
 
-char	**ft_split(char const *s, char c)
+static void	extract_words(char **p, const char *s, char c)
 {
-	int		i;
-	int		j;
-	char	**p;
-	int		len;
+	int	i;
+	int	j;
+	int	len;
 
 	i = 0;
 	j = 0;
-	if (s == NULL)
-		return (NULL);
-	p = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (p == 0)
-		return (NULL);
 	while (s[j] != '\0')
 	{
 		len = word_length(&s[j], c);
 		if (len > 0)
 		{
 			p[i] = copy_word(&s[j], len);
-			if (p[i] = NULL)
+			if (p[i] == NULL)
 			{
 				fail(p, i);
-				return (NULL);
+				return ;
 			}
-			j = j + len;
+			j += len;
 			i++;
 		}
 		else
 			j++;
 	}
 	p[i] = NULL;
-	return (p);
 }
 
-int	main(void)
+char	**ft_split(char const *s, char c)
 {
-	char s[] = "   zxcv      ar     t      t     b";
-	char c = ' ';
+	char	**p;
 
-	char **t = ft_split(s, c);
-	int i = 0;
-	while (t[i])
-	{
-		printf("%s\n", t[i]);
-		i++;
-	}
+	if (s == NULL)
+		return (NULL);
+	p = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (p == 0)
+		return (NULL);
+	extract_words(p, s, c);
+	return (p);
 }

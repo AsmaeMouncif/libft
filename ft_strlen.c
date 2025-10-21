@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:50:06 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/14 11:21:52 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 18:26:29 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t i = 0;
+	size_t	i;
+
+	i = 0;
 	while (s[i] != '\0')
 	{
 		i++;

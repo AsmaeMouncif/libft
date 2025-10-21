@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:10:54 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/15 12:27:29 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/20 18:54:23 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t i = 0;
+	size_t	i;
+
+	i = 0;
 	if (n == 0)
 		return (0);
 	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))

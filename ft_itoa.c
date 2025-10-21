@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:54:13 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/18 18:08:24 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/21 16:58:29 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,20 @@ int	ft_count(int n)
 	return (count);
 }
 
+void	fill_digits(char *p, long nb, int l, int neg)
+{
+	if (nb == 0)
+		p[l] = '0';
+	while (nb > 0)
+	{
+		p[l] = (nb % 10) + '0';
+		nb = nb / 10;
+		l--;
+	}
+	if (neg != 0)
+		p[0] = '-';
+}
+
 char	*ft_itoa(int n)
 {
 	long	nb;
@@ -39,31 +53,16 @@ char	*ft_itoa(int n)
 	nb = n;
 	l = ft_count(n);
 	p = malloc(l + 1);
-	if (p == 0)
+	if (p == NULL)
 		return (NULL);
 	p[l] = '\0';
 	l--;
-	if (nb == 0)
-		p[l] = '0';
 	neg = 0;
 	if (nb < 0)
 	{
 		neg = 1;
 		nb = -nb;
 	}
-	while (nb > 0)
-	{
-		p[l] = (nb % 10) + '0';
-		nb = nb / 10;
-		l--;
-	}
-	if (neg != 0)
-		p[0] = '-';
+	fill_digits(p, nb, l, neg);
 	return (p);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_itoa(2147483647));
-	return (0);
 }
