@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:33:54 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/21 17:23:27 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/23 15:31:59 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char		*p;
 	int			k;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	st = s1;
 	i = 0;
 	while (st[i] != '\0' && ft_strchr(set, st[i]) != NULL)

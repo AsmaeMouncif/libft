@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:10:14 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/21 10:08:26 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/23 15:31:35 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 	size_t	k;
 
+	if (big == NULL || little == NULL)
+		return (NULL);
 	if (little[0] == '\0')
 		return ((char *)big);
 	i = 0;
