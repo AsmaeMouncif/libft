@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:18:09 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/23 13:16:46 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/23 14:07:43 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,10 @@ static char	**extract_words(char **p, const char *s, char c)
 		if (len > 0)
 		{
 			p[i] = copy_word(&s[j], len);
-			if (p[i++] == NULL)
+			if (p[i] == NULL)
 			{
-				while (--i >= 0)
-					free(p[i]);
+				while (i >= 0)
+					free(p[i--]);
 				return (free(p), NULL);
 			}
 			j += len;
