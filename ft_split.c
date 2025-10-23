@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:18:09 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/21 18:19:12 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/23 13:16:46 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ static int	word_length(char const *s, char c)
 
 	l = 0;
 	while (s[l] != '\0' && s[l] != c)
-	{
 		l++;
-	}
 	return (l);
 }
 
@@ -58,18 +56,7 @@ static char	*copy_word(char const *s, int len)
 	return (p);
 }
 
-static void	fail(char **p, int i)
-{
-	i--;
-	while (i >= 0)
-	{
-		free(p[i]);
-		i--;
-	}
-	free(p);
-}
-
-static void	extract_words(char **p, const char *s, char c)
+static char	**extract_words(char **p, const char *s, char c)
 {
 	int	i;
 	int	j;
@@ -83,18 +70,19 @@ static void	extract_words(char **p, const char *s, char c)
 		if (len > 0)
 		{
 			p[i] = copy_word(&s[j], len);
-			if (p[i] == NULL)
+			if (p[i++] == NULL)
 			{
-				fail(p, i);
-				return ;
+				while (--i >= 0)
+					free(p[i]);
+				return (free(p), NULL);
 			}
 			j += len;
-			i++;
 		}
 		else
 			j++;
 	}
 	p[i] = NULL;
+	return (p);
 }
 
 char	**ft_split(char const *s, char c)
@@ -104,8 +92,7 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	p = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (p == 0)
+	if (p == NULL)
 		return (NULL);
-	extract_words(p, s, c);
-	return (p);
+	return (extract_words(p, s, c));
 }

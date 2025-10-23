@@ -6,7 +6,7 @@
 /*   By: asmounci <asmounci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:10:33 by asmounci          #+#    #+#             */
-/*   Updated: 2025/10/21 20:28:05 by asmounci         ###   ########.fr       */
+/*   Updated: 2025/10/23 09:53:46 by asmounci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int ch)
 {
-	int	i;
-	unsigned char c;
+	int				i;
+	unsigned char	c;
 
 	c = (unsigned char)ch;
 	i = 0;
